@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="refresh" content="1; url=/assets/SAPTAM-Catalogue.pdf" />
+  <title>Catalogue Download | Saptam Decor</title>
+  <meta name="description" content="Download the official Saptam Decor 36-page PDF catalogue featuring technical parameters, thickness tolerances, and complete shade indexes." />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+
+  <!-- Google Fonts: Modern Architectural Typography (Outfit & Plus Jakarta Sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body class="luxury-theme" style="display: flex; flex-direction: column; min-height: 100vh;">
+
+  <!-- Navigation Header -->
+  <header class="luxury-header" id="header">
+    <div class="header-inner container">
+      <a href="./index.html" class="brand-logo" aria-label="Saptam Decor Home">
+        <img src="/assets/logo.png" alt="Saptam Decor" class="brand-logo-img" />
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="./index.html" class="nav-item">Home</a>
+        <a href="./about.html" class="nav-item">About Us</a>
+        <div class="nav-item-dropdown" id="productsDropdown">
+          <button class="nav-item dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+            Products <svg class="dropdown-chevron" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="dropdown-menu">
+            <a href="./particle-boards.html" class="dropdown-link">
+              <span class="dropdown-link-title">Particle Boards</span>
+              <span class="dropdown-link-desc">Eco-friendly plantation agro-wood</span>
+            </a>
+            <a href="./mdf.html" class="dropdown-link">
+              <span class="dropdown-link-title">MDF Panels</span>
+              <span class="dropdown-link-desc">Medium Density Fibreboard for flawless finishes</span>
+            </a>
+            <a href="./sdhdmr.html" class="dropdown-link">
+              <span class="dropdown-link-title">SDHDMR</span>
+              <span class="dropdown-link-desc">Super Density High Moisture Resistance</span>
+            </a>
+            <a href="./sd-boilo.html" class="dropdown-link">
+              <span class="dropdown-link-title">SD Boilo</span>
+              <span class="dropdown-link-desc">Boiling Waterproof &gt;1000 kg/m³ peak density</span>
+            </a>
+          </div>
+        </div>
+        <a href="/assets/SAPTAM-Catalogue.pdf" download="SAPTAM-Catalogue.pdf" target="_blank" class="nav-item active">Catalogue</a>
+        <a href="./dealer.html" class="nav-item">Dealership</a>
+        <a href="./contact.html" class="nav-item">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="btn btn-primary" id="openQuoteModal">Get Quote</button>
+      </div>
+    </div>
+  </header>
+
+  <main style="flex: 1; display: flex; align-items: center; justify-content: center; padding: 4rem 1.5rem;">
+    <div class="container text-center" style="max-width: 680px;">
+      <span class="sub-heading">OFFICIAL SPECIFICATION & SHADE BOOK</span>
+      <h1 style="font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 1.2rem;">
+        Saptam Decor <span class="gold-text">Official Catalogue</span>
+      </h1>
+      <p style="color: var(--text-secondary); margin-bottom: 2rem; font-size: 1.05rem; line-height: 1.7;">
+        Your download should begin automatically. If not, click the button below to download the official 36-page high-resolution architectural catalogue (PDF).
+      </p>
+      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+        <a href="/assets/SAPTAM-Catalogue.pdf" download="SAPTAM-Catalogue.pdf" class="btn btn-primary" style="font-size: 1rem; padding: 0.9rem 2rem;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download PDF Catalogue (6.7 MB)
+        </a>
+        <a href="./index.html" class="btn btn-outline">Return to Home</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="luxury-footer" style="padding: 2rem 0;">
+    <div class="container text-center">
+      <p style="color: var(--text-muted); font-size: 0.85rem;">&copy; 2026 Saptam Decor Private Limited. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Application Logic -->
+  <script type="module" src="./main.js"></script>
+</body>
+</html>

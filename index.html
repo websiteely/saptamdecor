@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Saptam Decor | Luxury Architectural Surfaces & Engineered Boards</title>
+  <meta name="description" content="Premier Indian manufacturer of high-quality bagasse particle boards, advanced MDF, SDHDMR, and SD Boilo panels. Nature's touch, crafted to last." />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+
+  <!-- Google Fonts: Modern Architectural Typography (Outfit & Plus Jakarta Sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body class="luxury-theme">
+
+  <!-- Navigation Header -->
+  <header class="luxury-header" id="header">
+    <div class="header-inner container">
+      <a href="./index.html" class="brand-logo" aria-label="Saptam Decor Home">
+        <img src="/assets/logo.png" alt="Saptam Decor" class="brand-logo-img" />
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="./index.html" class="nav-item active">Home</a>
+        <a href="./about.html" class="nav-item">About Us</a>
+        <div class="nav-item-dropdown" id="productsDropdown">
+          <button class="nav-item dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+            Products <svg class="dropdown-chevron" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="dropdown-menu">
+            <a href="./particle-boards.html" class="dropdown-link">
+              <span class="dropdown-link-title">Particle Boards</span>
+              <span class="dropdown-link-desc">Eco-friendly plantation agro-wood</span>
+            </a>
+            <a href="./mdf.html" class="dropdown-link">
+              <span class="dropdown-link-title">MDF Panels</span>
+              <span class="dropdown-link-desc">Medium Density Fibreboard for flawless finishes</span>
+            </a>
+            <a href="./sdhdmr.html" class="dropdown-link">
+              <span class="dropdown-link-title">SDHDMR</span>
+              <span class="dropdown-link-desc">Super Density High Moisture Resistance</span>
+            </a>
+            <a href="./sd-boilo.html" class="dropdown-link">
+              <span class="dropdown-link-title">SD Boilo</span>
+              <span class="dropdown-link-desc">Boiling Waterproof &gt;1000 kg/m³ peak density</span>
+            </a>
+          </div>
+        </div>
+        <a href="/assets/SAPTAM-Catalogue.pdf" download="SAPTAM-Catalogue.pdf" target="_blank" class="nav-item">Catalogue</a>
+        <a href="./dealer.html" class="nav-item">Dealership</a>
+        <a href="./contact.html" class="nav-item">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="btn btn-primary" id="openQuoteModal">Get Quote</button>
+        <button class="mobile-toggle" id="mobileMenuBtn" aria-label="Toggle Navigation">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <div class="drawer-links">
+      <a href="./index.html" class="drawer-item active">Home</a>
+      <a href="./about.html" class="drawer-item">About Us</a>
+      <div class="drawer-dropdown">
+        <button class="drawer-item drawer-dropdown-toggle">
+          <span>Products</span>
+          <svg class="drawer-chevron" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="drawer-submenu">
+          <a href="./particle-boards.html" class="drawer-subitem">✦ Particle Boards</a>
+          <a href="./mdf.html" class="drawer-subitem">✦ MDF Panels</a>
+          <a href="./sdhdmr.html" class="drawer-subitem">✦ SDHDMR (Super Density)</a>
+          <a href="./sd-boilo.html" class="drawer-subitem">✦ SD Boilo (BWP Grade)</a>
+        </div>
+      </div>
+      <a href="/assets/SAPTAM-Catalogue.pdf" download="SAPTAM-Catalogue.pdf" target="_blank" class="drawer-item">Catalogue (Download)</a>
+      <a href="./dealer.html" class="drawer-item">Become a Dealer</a>
+      <a href="./contact.html" class="drawer-item">Contact & Locations</a>
+    </div>
+    <div class="drawer-actions">
+      <button class="btn btn-primary w-full" id="drawerQuoteBtn">Request a Quote</button>
+      <a href="tel:+919557276598" class="drawer-contact-link">Direct Line: (+91) 95572 76598</a>
+    </div>
+  </div>
+
+  <main>
+    <!-- HERO SCROLL EXPERIENCE SECTION -->
+    <section class="hero-scroll-container" id="hero-scroll">
+      <div class="hero-sticky-frame">
+        
+        <!-- Ambient Atmospheric Background (Soft blurred reflection for cinematic depth on desktop) -->
+        <div class="hero-ambient-bg">
+          <video id="hero-bg-video" src="/assets/hero_seek_optimized.mp4" muted playsinline webkit-playsinline preload="auto"></video>
+          <div class="ambient-dark-mask"></div>
+        </div>
+
+        <!-- Architectural Showcase Stage -->
+        <div class="hero-stage-container container">
+          
+          <!-- Left Column: Editorial Headlines & Chapter Story -->
+          <div class="hero-stage-left">
+            <!-- Opening Scene: Hero Intro -->
+            <div class="hero-chapter active" id="chapter-1" data-scene="1">
+              <div class="chapter-badge">VIRTUAL SHOWROOM TOUR</div>
+              <h1 class="chapter-title">Nature’s Touch,<br/><span class="gold-text">Crafted to Last</span></h1>
+              <p class="chapter-desc">
+                Step into a world where sustainable materials meet exceptional design. Explore a thoughtfully crafted penthouse featuring Saptam Decor’s engineered surfaces — from versatile pre-laminated boards to high-performance MDF, SDHDMR and SD Boilo.
+              </p>
+              <p class="chapter-sub-desc">
+                Designed for modern living, engineered for lasting performance, and crafted to bring every interior vision to life.
+              </p>
+              <div class="hero-cta-group">
+                <a href="#products" class="btn btn-primary">Explore Products</a>
+                <a href="/assets/SAPTAM-Catalogue.pdf" target="_blank" class="btn btn-glass">Download Catalogue</a>
+              </div>
+            </div>
+
+            <!-- Zone 01: The Living Room -->
+            <div class="hero-chapter" id="chapter-2" data-scene="2">
+              <div class="chapter-badge">ZONE 01 • THE LIVING ROOM</div>
+              <h2 class="chapter-title">Architectural Details.<br/><span class="gold-text">Seamless Possibilities.</span></h2>
+              <p class="chapter-desc">
+                Discover how Saptam Decor’s pre-laminated particle boards and precision-crafted MDF bring character and functionality to contemporary living spaces.
+              </p>
+              <div class="chapter-spec-box">
+                <div class="spec-entry">
+                  <span class="spec-kicker">PRODUCT FOCUS</span>
+                  <span class="spec-text">Pre-Laminated Particle Boards | MDF</span>
+                </div>
+                <div class="spec-entry">
+                  <span class="spec-kicker">DESIGN APPLICATIONS</span>
+                  <span class="spec-text">TV Units, Wall Panelling, Floating Consoles, Display Shelves, Decorative Louvers</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Zone 02: The Master Suite -->
+            <div class="hero-chapter" id="chapter-3" data-scene="3">
+              <div class="chapter-badge">ZONE 02 • THE MASTER SUITE</div>
+              <h2 class="chapter-title">Textures That Inspire.<br/><span class="gold-text">Finishes That Endure.</span></h2>
+              <p class="chapter-desc">
+                Experience the warmth of natural wood aesthetics with the versatility of engineered surfaces. Saptam Decor’s MDF and pre-laminated boards bring together refined textures, elegant finishes and design flexibility for sophisticated bedroom interiors.
+              </p>
+              <div class="chapter-spec-box">
+                <div class="spec-entry">
+                  <span class="spec-kicker">PRODUCT FOCUS</span>
+                  <span class="spec-text">MDF | Pre-Laminated Particle Boards</span>
+                </div>
+                <div class="spec-entry">
+                  <span class="spec-kicker">DESIGN APPLICATIONS</span>
+                  <span class="spec-text">Wardrobes, Bed Back Panels, Bedside Tables, Dressing Units, Storage Cabinets</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Zone 03: The Culinary Atelier -->
+            <div class="hero-chapter" id="chapter-4" data-scene="4">
+              <div class="chapter-badge">ZONE 03 • THE CULINARY ATELIER</div>
+              <h2 class="chapter-title">Engineered for Demanding Spaces.<br/><span class="gold-text">Designed for Everyday Living.</span></h2>
+              <p class="chapter-desc">
+                Discover Saptam Decor’s SDHDMR and SD Boilo boards, developed for demanding interior applications where moisture resistance, dimensional stability and reliable performance matter.
+              </p>
+              <div class="chapter-spec-box">
+                <div class="spec-entry">
+                  <span class="spec-kicker">PRODUCT FOCUS</span>
+                  <span class="spec-text">SDHDMR | SD Boilo</span>
+                </div>
+                <div class="spec-entry">
+                  <span class="spec-kicker">DESIGN APPLICATIONS</span>
+                  <span class="spec-text">Modular Kitchens, Under-Sink Cabinets, Overhead Units, Pantry Storage, Utility Cabinets</span>
+                </div>
+              </div>
+              <div class="hero-cta-group" style="margin-top: 1rem;">
+                <button class="btn btn-primary" id="heroQuoteBtn">Get a Quote</button>
+                <a href="/assets/SAPTAM-Catalogue.pdf" download="SAPTAM-Catalogue.pdf" target="_blank" class="btn btn-glass">Download Catalogue</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Center Column: The Crisp Architectural Monolith Video Player -->
+          <div class="hero-stage-center">
+            <div class="monolith-frame" id="monolithFrame">
+              <div class="frame-glass-edge"></div>
+              
+              <!-- Direct Native Hardware Video Player (Instant Crisp Scrubbing) -->
+              <video 
+                id="hero-video" 
+                src="/assets/hero_seek_optimized.mp4" 
+                muted 
+                playsinline 
+                webkit-playsinline
+                preload="auto"
+                class="monolith-video">
+              </video>
+              
+              <!-- Live Video HUD Overlay -->
+              <div class="monolith-hud">
+                <div class="hud-live-tag"><span class="rec-dot"></span> LIVE WALKTHROUGH</div>
+                <div class="hud-time" id="hudVideoTime">00:00 / 00:41</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="scroll-helper">
+          <div class="mouse-icon"><div class="wheel"></div></div>
+          <span>SCROLL TO WALK THROUGH</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: 3D ANATOMY / EXPLODED LAYER BOARD -->
+    <section class="section-anatomy" id="anatomy">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="sub-heading">ENGINEERING EXCELLENCE</span>
+          <h2 class="section-title">The Anatomy of <span class="gold-text">Resilience</span></h2>
+          <p class="section-subtitle">
+            Every Saptam panel is a symphony of multi-layer fusion bonding—engineered from raw agricultural fiber into an indestructible architectural standard.
+          </p>
+        </div>
+
+        <div class="anatomy-grid">
+          <div class="anatomy-visual-container">
+            <div class="visual-card">
+              <img src="/assets/saptam_exploded_board.jpg" alt="Saptam 3D Exploded Layer Board View" class="exploded-img" id="explodedBoardImg" />
+              
+              <!-- Interactive Hotspots -->
+              <div class="hotspot pin-1" data-layer="1" title="Click to view Layer 1 details">
+                <span class="pulse"></span>
+                <span class="pin-label">01. Diamond Melamine Overlay</span>
+              </div>
+              <div class="hotspot pin-2" data-layer="2" title="Click to view Layer 2 details">
+                <span class="pulse"></span>
+                <span class="pin-label">02. High-Definition Decor Foil</span>
+              </div>
+              <div class="hotspot pin-3" data-layer="3" title="Click to view Layer 3 details">
+                <span class="pulse"></span>
+                <span class="pin-label">03. Super-Density Fibrous Core</span>
+              </div>
+              <div class="hotspot pin-4" data-layer="4" title="Click to view Layer 4 details">
+                <span class="pulse"></span>
+                <span class="pin-label">04. Anti-Warp Moisture Barrier</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="anatomy-content-container">
+            <div class="layer-info-card active" id="layer-card-1">
+              <div class="layer-num">LAYER 01</div>
+              <h3 class="layer-title">Diamond Melamine Wear Overlay</h3>
+              <p class="layer-desc">
+                An optically transparent, crystalline overlay impregnated with specialized resins that shield against abrasive scratches, ultraviolet discoloration, and harsh chemical cleaning agents.
+              </p>
+              <div class="layer-specs">
+                <div class="spec-item"><span class="spec-label">Scratch Resistance:</span> <span class="spec-val">Grade 4+ High Abrasion</span></div>
+                <div class="spec-item"><span class="spec-label">UV Stability:</span> <span class="spec-val">Anti-Fading ISO 4586</span></div>
+              </div>
+            </div>
+
+            <div class="layer-info-card" id="layer-card-2">
+              <div class="layer-num">LAYER 02</div>
+              <h3 class="layer-title">High-Definition Decor Foil</h3>
+              <p class="layer-desc">
+                Printed with German high-fidelity pigments to mirror natural timber grains (5000 Series Oak, Walnut, Teak) and soft-touch contemporary architectural solids (1000 Series).
+              </p>
+              <div class="layer-specs">
+                <div class="spec-item"><span class="spec-label">Print Quality:</span> <span class="spec-val">Synchronized Pore Texture</span></div>
+                <div class="spec-item"><span class="spec-label">Color Fastness:</span> <span class="spec-val">Class 6 Blue Wool Standard</span></div>
+              </div>
+            </div>
+
+            <div class="layer-info-card" id="layer-card-3">
+              <div class="layer-num">LAYER 03</div>
+              <h3 class="layer-title">Super-Density Bagasse & Agro-Wood Core</h3>
+              <p class="layer-desc">
+                Manufactured from renewable sugarcane bagasse and plantation eucalyptus fibers, bonded under controlled high-temperature pressing into a dense, borer-proof, zero-cavity core.
+              </p>
+              <div class="layer-specs">
+                <div class="spec-item"><span class="spec-label">Core Density:</span> <span class="spec-val">750 to &gt; 1000 kg/m³</span></div>
+                <div class="spec-item"><span class="spec-label">Internal Bond:</span> <span class="spec-val">≥ 0.85 N/mm²</span></div>
+              </div>
+            </div>
+
+            <div class="layer-info-card" id="layer-card-4">
+              <div class="layer-num">LAYER 04</div>
+              <h3 class="layer-title">Balancing Moisture Barrier Film</h3>
+              <p class="layer-desc">
+                A calibrated underlay film balancing the physical surface tensions, ensuring the board stays perfectly flat, dimensionally stable, and sealed against subterranean humidity.
+              </p>
+              <div class="layer-specs">
+                <div class="spec-item"><span class="spec-label">Flatness Index:</span> <span class="spec-val">Zero Curvature Distortion</span></div>
+                <div class="spec-item"><span class="spec-label">Water Vapor Barrier:</span> <span class="spec-val">100% Sealed Base</span></div>
+              </div>
+            </div>
+
+            <!-- Layer Navigation Tabs -->
+            <div class="layer-switcher-strip">
+              <button class="layer-btn active" data-target="1">01. Melamine</button>
+              <button class="layer-btn" data-target="2">02. Decor</button>
+              <button class="layer-btn" data-target="3">03. Core</button>
+              <button class="layer-btn" data-target="4">04. Barrier</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: PRODUCT PORTFOLIO -->
+    <section class="section-products" id="products">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="sub-heading">THE COLLECTION</span>
+          <h2 class="section-title">Four Pillars of <span class="gold-text">Architectural Strength</span></h2>
+          <p class="section-subtitle">
+            Engineered to cater to every design specification—from sustainable office millwork to high-humidity commercial culinary spaces.
+          </p>
+        </div>
+
+        <!-- Product Cards Grid -->
+        <div class="products-grid">
+          
+          <!-- Product 1: Particle Boards -->
+          <div class="product-card">
+            <div class="product-badge">ECO-SUSTAINABLE</div>
+            <div class="product-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+            </div>
+            <h3 class="product-name">Pre-Laminated Particle Boards</h3>
+            <p class="product-description">
+              Crafted from high-quality agro-wood like eucalyptus and sugarcane bagasse. Lightweight, eco-friendly engineered panels offering superior load-bearing consistency and exceptional value.
+            </p>
+            <ul class="product-features">
+              <li>✓ Eco-Friendly Agricultural Fibers</li>
+              <li>✓ High Structural Homogeneity</li>
+              <li>✓ Pre-Laminated Smooth Melamine Finishes</li>
+              <li>✓ Ideal for Office Desks & Modular Shelving</li>
+            </ul>
+            <div class="product-footer">
+              <span class="density-chip">~ 680 - 750 kg/m³</span>
+              <a href="./particle-boards.html" class="btn btn-sm btn-outline">Explore Product &rarr;</a>
+            </div>
+          </div>
+
+          <!-- Product 2: MDF -->
+          <div class="product-card featured">
+            <div class="product-badge gold">EXPANDING 2025/2026</div>
+            <div class="product-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            </div>
+            <h3 class="product-name">Advanced MDF Panels</h3>
+            <p class="product-description">
+              Medium Density Fibreboard made from micro-refined wood fibers bonded under intense heat and pressure. Flawless smooth surfaces tailored for precision CNC carving, routing, and high-gloss lacquer finishes.
+            </p>
+            <ul class="product-features">
+              <li>✓ Precision CNC Machining & Routing</li>
+              <li>✓ Pathogen & Micro-Organism Resistant</li>
+              <li>✓ Velvet-Smooth Surface for Painting</li>
+              <li>✓ Fluted Panels, Cornices & 3D Carvings</li>
+            </ul>
+            <div class="product-footer">
+              <span class="density-chip">~ 750 - 820 kg/m³</span>
+              <a href="./mdf.html" class="btn btn-sm btn-primary">Explore Product &rarr;</a>
+            </div>
+          </div>
+
+          <!-- Product 3: SDHDMR -->
+          <div class="product-card">
+            <div class="product-badge">HEAVY DUTY</div>
+            <div class="product-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3 class="product-name">SDHDMR (Super Density)</h3>
+            <p class="product-description">
+              Super Density High Moisture Resistant boards engineered for areas requiring extreme impact tolerance. Fire-retardant, non-toxic, and lead-free, guaranteeing a healthier living environment.
+            </p>
+            <ul class="product-features">
+              <li>✓ Superior Moisture & Humidity Resistance</li>
+              <li>✓ Fire-Retardant Performance</li>
+              <li>✓ Non-Toxic & 100% Lead-Free</li>
+              <li>✓ Walk-In Wardrobes & High-Traffic Millwork</li>
+            </ul>
+            <div class="product-footer">
+              <span class="density-chip">~ 850 - 950 kg/m³</span>
+              <a href="./sdhdmr.html" class="btn btn-sm btn-outline">Explore Product &rarr;</a>
+            </div>
+          </div>
+
+          <!-- Product 4: SD Boilo -->
+          <div class="product-card hero-highlight">
+            <div class="product-badge gold">MAXIMUM DEFENSE</div>
+            <div class="product-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/><path d="M12 8v8"/></svg>
+            </div>
+            <h3 class="product-name">SD Boilo (BWP Ultra-Density)</h3>
+            <p class="product-description">
+              Engineered specifically for kitchens and damp areas with a monumental density exceeding 1000 kg/m³. Tested to withstand boiling water without swelling, completely immune to termites and borers.
+            </p>
+            <ul class="product-features">
+              <li>✓ Boiling Waterproof (BWP Certified)</li>
+              <li>✓ Density Rating Exceeding 1000 kg/m³</li>
+              <li>✓ Complete Immunity to Termites & Borers</li>
+              <li>✓ Commercial Wet Bars, Kitchens & Restrooms</li>
+            </ul>
+            <div class="product-footer">
+              <span class="density-chip gold-chip">&gt; 1000 kg/m³</span>
+              <a href="./sd-boilo.html" class="btn btn-sm btn-primary">Explore Product &rarr;</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: COMPANY JOURNEY TIMELINE -->
+    <section class="section-journey" id="journey">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="sub-heading">OUR CHRONICLE</span>
+          <h2 class="section-title">The Saptam <span class="gold-text">Journey</span></h2>
+          <p class="section-subtitle">
+            From visionary foundation in 2018 to pioneering India's next-generation MDF facility in 2025/2026.
+          </p>
+        </div>
+
+        <div class="timeline-container">
+          <div class="timeline-line"></div>
+          
+          <!-- Milestone 1 -->
+          <div class="timeline-item left">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-year">2018</span>
+              <h3 class="timeline-title">Laying the Foundation</h3>
+              <p>The vision for an agro-based eco-particle board plant took shape. Strategic plant location selected on Bhopa Road, Muzaffarnagar, followed by machinery procurement and regulatory approvals.</p>
+            </div>
+          </div>
+
+          <!-- Milestone 2 -->
+          <div class="timeline-item right">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-year">2019</span>
+              <h3 class="timeline-title">Construction & Commissioning</h3>
+              <p>Civil infrastructure completed, German and domestic precision machinery erected. Initial trial production runs executed to stabilize high-pressure bonding tolerances.</p>
+            </div>
+          </div>
+
+          <!-- Milestone 3 -->
+          <div class="timeline-item left">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-year">2020</span>
+              <h3 class="timeline-title">Commercial Production Begins</h3>
+              <p>Commercial operations inaugurated in January. Despite unprecedented pandemic headwinds, Saptam successfully created agile supply lines and introduced bagasse pre-laminated boards to North Indian distributors.</p>
+            </div>
+          </div>
+
+          <!-- Milestone 4 -->
+          <div class="timeline-item right">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-year">2021 - 2024</span>
+              <h3 class="timeline-title">Market Expansion & Product Diversification</h3>
+              <p>Broadened national footprint across architect and OEM networks. Introduced the SDHDMR and SD Boilo extreme-density product lines to solve damp-area cabinet decay.</p>
+            </div>
+          </div>
+
+          <!-- Milestone 5 -->
+          <div class="timeline-item left highlight">
+            <div class="timeline-dot gold"></div>
+            <div class="timeline-content gold-card">
+              <span class="timeline-year">2025 - 2026</span>
+              <h3 class="timeline-title">High-Capacity Advanced MDF Venture</h3>
+              <p>Launching our cutting-edge MDF production facility. Leveraging state-of-the-art continuous presses to provide complete interior solutions and solidify our ranking among India's top 3 wood-panel leaders.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Leadership Row -->
+        <div class="leadership-section">
+          <h3 class="leadership-heading text-center">Board of Directors & Operational Leadership</h3>
+          <div class="leaders-grid">
+            <div class="leader-card">
+              <div class="leader-avatar">SA</div>
+              <h4>Suhil Agarwal</h4>
+              <span class="leader-role">Managing Director</span>
+            </div>
+            <div class="leader-card">
+              <div class="leader-avatar">RA</div>
+              <h4>Ranchna Agarwal</h4>
+              <span class="leader-role">Director</span>
+            </div>
+            <div class="leader-card">
+              <div class="leader-avatar">MA</div>
+              <h4>Mukund Agarwal</h4>
+              <span class="leader-role">Director</span>
+            </div>
+            <div class="leader-card">
+              <div class="leader-avatar">CA</div>
+              <h4>Chaitanya Agarwal</h4>
+              <span class="leader-role">Director</span>
+            </div>
+            <div class="leader-card">
+              <div class="leader-avatar">BV</div>
+              <h4>BV Rao</h4>
+              <span class="leader-role">Director Operations</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 7: SPECIFIER & DEALER ACTION (CONTACT) -->
+    <section class="section-contact" id="contact">
+      <div class="container">
+        <div class="contact-card-grid">
+          
+          <div class="contact-info-panel">
+            <span class="sub-heading">CONNECT WITH SAPTAM</span>
+            <h2 class="contact-title">Let’s Create Extraordinary <span class="gold-text">Spaces</span></h2>
+            <p class="contact-intro">
+              Whether you are an architect designing a luxury residence, a contractor outfitting commercial spaces, or a distributor looking to join our dealer network.
+            </p>
+
+            <div class="info-blocks">
+              <div class="info-block">
+                <div class="info-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                </div>
+                <div>
+                  <h4>Manufacturing Unit</h4>
+                  <p>10th Km, Bhopa Road, Muzaffarnagar (U.P) 251001, India</p>
+                </div>
+              </div>
+
+              <div class="info-block">
+                <div class="info-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"/><line x1="9" y1="22" x2="9" y2="22.01"/><line x1="15" y1="22" x2="15" y2="22.01"/><line x1="12" y1="18" x2="12" y2="18.01"/></svg>
+                </div>
+                <div>
+                  <h4>Marketing & Corporate Office</h4>
+                  <p>A-1003, 10th Floor, Tower-A, The I-Thum, Plot No: A-40, Sector-62, Noida (U.P) - 201307, India</p>
+                </div>
+              </div>
+
+              <div class="info-block">
+                <div class="info-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                </div>
+                <div>
+                  <h4>Direct Contacts</h4>
+                  <p>(+91) 95572 76598 / 74568 02402 / 74560 07778</p>
+                  <p>sales@saptamdecor.com</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="whatsapp-card">
+              <div class="wa-content">
+                <strong>Need Instant Architectural Guidance?</strong>
+                <span>Direct WhatsApp connect with our technical consultation team.</span>
+              </div>
+              <a href="https://wa.me/919557276598?text=Hello%20Saptam%20Decor,%20I%20would%20like%20to%20inquire%20about%20your%20boards." target="_blank" class="btn btn-wa">
+                Chat on WhatsApp
+              </a>
+            </div>
+
+          </div>
+
+          <div class="contact-form-panel">
+            <h3 class="form-title">Send Inquiry / Become a Partner</h3>
+            <form id="contactForm" class="luxury-form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="formName">Full Name *</label>
+                  <input type="text" id="formName" name="name" placeholder="Ar. Rajesh Sharma" required />
+                </div>
+                <div class="form-group">
+                  <label for="formPhone">Phone / WhatsApp Number *</label>
+                  <input type="tel" id="formPhone" name="phone" placeholder="+91 98765 43210" required />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="formProduct">Product Line of Interest *</label>
+                <select id="formProduct" name="product" required>
+                  <option value="SD Boilo (Boiling Waterproof)">SD Boilo (Boiling Waterproof Density &gt; 1000)</option>
+                  <option value="SDHDMR Super Density">SDHDMR Super Density Moisture Resistant</option>
+                  <option value="Advanced MDF Panels">Advanced MDF Panels</option>
+                  <option value="Pre-Laminated Particle Boards">Pre-Laminated Particle Boards</option>
+                  <option value="Complete Portfolio / Catalogue">Full Portfolio / Catalogue</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="formMessage">Requirement / Message (Optional)</label>
+                <textarea id="formMessage" name="message" rows="2" placeholder="Mention square footage, thickness, project city, or query..."></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-whatsapp w-full" id="submitFormBtn">
+                <svg width="18" height="18" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                <span>Send Inquiry on WhatsApp</span>
+              </button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="luxury-footer">
+    <div class="container footer-inner">
+      <div class="footer-col brand-col">
+        <div class="footer-logo">
+          <img src="/assets/logo.png" alt="Saptam Decor" class="footer-logo-img" />
+        </div>
+        <p class="footer-tagline">Better living starts with Saptam. Crafting sustainable agro-wood and engineered panels that elevate homes and enrich lives.</p>
+        <span class="footer-cert">ISO 9001:2015 Certified Manufacturing</span>
+      </div>
+
+      <div class="footer-col">
+        <h4>Product Solutions</h4>
+        <ul>
+          <li><a href="./particle-boards.html">Pre-Laminated Particle Boards</a></li>
+          <li><a href="./mdf.html">Advanced MDF Panels</a></li>
+          <li><a href="./sdhdmr.html">SDHDMR Super Density</a></li>
+          <li><a href="./sd-boilo.html">SD Boilo Boiling Waterproof</a></li>
+          <li><a href="/assets/SAPTAM-Catalogue.pdf" download="SAPTAM-Catalogue.pdf" target="_blank">Download Catalogue (PDF)</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Company & Quality</h4>
+        <ul>
+          <li><a href="./about.html">About Saptam Decor</a></li>
+          <li><a href="./about.html#leadership">Board of Directors</a></li>
+          <li><a href="./about.html#sustainability">Agro-Wood Manifesto</a></li>
+          <li><a href="./dealer.html">Become an Authorized Dealer</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Headquarters & Contact</h4>
+        <p><strong>Manufacturing Plant:</strong> 10th Km, Bhopa Road, Muzaffarnagar (U.P) 251001, India</p>
+        <p><strong>Marketing Tower:</strong> A-1003, The I-Thum, Sector-62, Noida (U.P) - 201307</p>
+        <p><strong>Direct Desk:</strong> (+91) 95572 76598</p>
+        <p><strong>Email:</strong> sales@saptamdecor.com</p>
+        <div style="margin-top: 1rem;">
+          <a href="./contact.html" class="btn btn-outline" style="padding: 6px 14px; font-size: 0.8rem;">View Directions & Map</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom container">
+      <p>&copy; 2026 Saptam Decor Private Limited. All Rights Reserved. ISO 9001:2015 Certified.</p>
+      <div class="footer-bottom-links">
+        <a href="#hero-scroll">Back to Top ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODAL: REQUEST A QUOTE -->
+  <div class="modal-backdrop" id="quoteModal">
+    <div class="modal-box">
+      <button class="modal-close" id="closeQuoteModal">&times;</button>
+      <div class="modal-header">
+        <span class="sub-heading">DIRECT FROM PLANT</span>
+        <h3>Request an Official Quote</h3>
+        <p>Connect with our commercial sales and engineering team for wholesale pricing, plant dispatch lead times, and project specifications.</p>
+      </div>
+      <form id="quoteForm" class="luxury-form">
+        <div class="form-group">
+          <label>Full Name / Business Name *</label>
+          <input type="text" name="name" required placeholder="e.g. Suhil Agarwal / Studio Design" />
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Phone / WhatsApp *</label>
+            <input type="tel" name="phone" required placeholder="+91 98765 43210" />
+          </div>
+          <div class="form-group">
+            <label>City & State</label>
+            <input type="text" name="city" placeholder="e.g. Noida, UP" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Product of Interest *</label>
+          <select name="product" required>
+            <option value="">Select engineered surface</option>
+            <option value="Advanced MDF Panels">Advanced MDF Panels</option>
+            <option value="SDHDMR (Super Density)">SDHDMR (Super Density)</option>
+            <option value="SD Boilo (Boiling Waterproof)">SD Boilo (Boiling Waterproof &gt;1000 kg/m³)</option>
+            <option value="Pre-Laminated Particle Board">Pre-Laminated Particle Board</option>
+            <option value="Complete Product Portfolio">Complete Product Range</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Requirement Details (Optional)</label>
+          <textarea rows="2" name="details" placeholder="Thickness, board sizes, estimated square feet..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-whatsapp w-full">
+          <svg width="18" height="18" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+          <span>Send Quote Request on WhatsApp</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="luxury-toast" id="toastNotification">
+    <div class="toast-icon">✓</div>
+    <div class="toast-message" id="toastMessage">Inquiry submitted successfully!</div>
+  </div>
+
+  <!-- Application Logic -->
+  <script type="module" src="./main.js"></script>
+</body>
+</html>
