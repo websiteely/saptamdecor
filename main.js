@@ -497,6 +497,16 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // Locations Accordion Toggle
+  const locationsToggleBtn = document.getElementById("locationsToggleBtn");
+  const locationsAccordion = document.getElementById("locationsAccordion");
+  if (locationsToggleBtn && locationsAccordion) {
+    locationsToggleBtn.addEventListener("click", () => {
+      const isOpen = locationsAccordion.classList.toggle("is-open");
+      locationsToggleBtn.setAttribute("aria-expanded", isOpen ? "true" : "false");
+    });
+  }
+
   const dealerForm = document.getElementById("dealerForm");
   if (dealerForm) {
     dealerForm.addEventListener("submit", (e) => {
