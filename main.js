@@ -249,7 +249,19 @@ document.addEventListener("DOMContentLoaded", () => {
           // Update Chapters
           chapters.forEach((chap, idx) => {
             if (chap) {
-              chap.classList.toggle("active", idx === activeZone.chapterIndex);
+              const isActive = idx === activeZone.chapterIndex;
+              chap.classList.toggle("active", isActive);
+              if (!isActive) {
+                chap.classList.remove("is-expanded");
+                const btn = chap.querySelector(".mobile-hud-toggle");
+                if (btn) {
+                  btn.setAttribute("aria-expanded", "false");
+                  const label = btn.querySelector(".toggle-text");
+                  if (label) {
+                    label.textContent = chap.id === "chapter-1" ? "Explore" : "View Specs";
+                  }
+                }
+              }
             }
           });
 
@@ -257,6 +269,42 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       },
     });
+
+    // Mobile HUD Drawer Toggle Logic (Option 2: Micro-HUD)
+    const heroLeftStage = document.querySelector(".hero-stage-left");
+    if (heroLeftStage) {
+      heroLeftStage.addEventListener("click", (e) => {
+        // If clicking inside drawer body links or interactive buttons, let normal action trigger
+        if (e.target.closest(".chapter-drawer-body a, .chapter-drawer-body button")) {
+          return;
+        }
+
+        const toggleBtn = e.target.closest(".mobile-hud-toggle");
+        const dragPill = e.target.closest(".hud-drag-pill");
+        const hudHeader = e.target.closest(".chapter-hud-header");
+        const chapterTitle = e.target.closest(".chapter-title");
+
+        if (toggleBtn || dragPill || hudHeader || chapterTitle) {
+          e.preventDefault();
+          const activeChapter = heroLeftStage.querySelector(".hero-chapter.active");
+          if (activeChapter) {
+            const isExpanded = activeChapter.classList.toggle("is-expanded");
+            const btn = activeChapter.querySelector(".mobile-hud-toggle");
+            if (btn) {
+              btn.setAttribute("aria-expanded", isExpanded ? "true" : "false");
+              const label = btn.querySelector(".toggle-text");
+              if (label) {
+                if (activeChapter.id === "chapter-1") {
+                  label.textContent = isExpanded ? "Close" : "Explore";
+                } else {
+                  label.textContent = isExpanded ? "Close" : "View Specs";
+                }
+              }
+            }
+          }
+        }
+      });
+    }
   }
 
 

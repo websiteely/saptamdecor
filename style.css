@@ -1188,6 +1188,30 @@ section.hero-scroll-container,
   flex-wrap: wrap;
 }
 
+.hud-drag-pill {
+  display: none;
+}
+
+.mobile-hud-toggle {
+  display: none;
+}
+
+.chapter-hud-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 0.8rem;
+}
+
+.chapter-hud-header .chapter-badge {
+  margin-bottom: 0;
+}
+
+.chapter-drawer-body {
+  display: block;
+}
+
+
 .chapter-stat-strip {
   display: flex;
   gap: 1rem;
@@ -3431,23 +3455,24 @@ section,
     inset: 0;
     background: linear-gradient(
       to top,
-      rgba(250, 248, 245, 0.96) 0%,
-      rgba(250, 248, 245, 0.65) 35%,
-      rgba(250, 248, 245, 0.15) 65%,
-      rgba(250, 248, 245, 0.5) 100%
+      rgba(10, 15, 12, 0.5) 0%,
+      rgba(10, 15, 12, 0.12) 25%,
+      rgba(10, 15, 12, 0) 50%,
+      rgba(10, 15, 12, 0.25) 100%
     );
     pointer-events: none;
     z-index: 2;
   }
   .hero-stage-left {
     position: relative;
-    z-index: 10;
+    z-index: 20;
     min-height: auto;
     height: auto;
     width: 100%;
     max-width: 520px;
     margin: 0 auto;
     display: block;
+    pointer-events: auto;
   }
   .hero-chapter {
     display: none;
@@ -3455,18 +3480,103 @@ section,
     top: auto;
     left: auto;
     transform: none;
-    background: rgba(255, 255, 255, 0.94);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border: 1px solid var(--border-glass);
-    border-radius: var(--radius-md);
-    padding: 1.2rem 1.3rem;
-    box-shadow: 0 15px 40px rgba(18, 29, 24, 0.14);
+    background: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(197, 160, 89, 0.4);
+    border-radius: 20px;
+    padding: 0.75rem 1.05rem 0.85rem;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.22);
     width: 100%;
     animation: chapterFadeIn 0.35s ease forwards;
+    transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, background 0.3s ease;
   }
   .hero-chapter.active {
     display: block;
+  }
+  .hud-drag-pill {
+    display: block;
+    width: 36px;
+    height: 4px;
+    background: rgba(0, 0, 0, 0.16);
+    border-radius: 999px;
+    margin: 0 auto 6px auto;
+    cursor: pointer;
+  }
+  .chapter-hud-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    margin-bottom: 0.3rem;
+  }
+  .chapter-hud-header .chapter-badge {
+    margin-bottom: 0;
+    font-size: 0.65rem;
+    padding: 4px 10px;
+  }
+  .mobile-hud-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    background: rgba(197, 160, 89, 0.16);
+    border: 1px solid rgba(197, 160, 89, 0.45);
+    color: #6d4f13;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 3px 9px;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    user-select: none;
+  }
+  .mobile-hud-toggle:hover,
+  .mobile-hud-toggle:active {
+    background: var(--gold-primary);
+    color: #fff;
+    border-color: var(--gold-primary);
+  }
+  .mobile-hud-toggle .toggle-icon {
+    transition: transform 0.3s ease;
+    display: block;
+  }
+  .hero-chapter.is-expanded .mobile-hud-toggle {
+    background: var(--gold-primary);
+    color: #fff;
+    border-color: var(--gold-primary);
+  }
+  .hero-chapter.is-expanded .mobile-hud-toggle .toggle-icon {
+    transform: rotate(180deg);
+  }
+  .hero-chapter .chapter-title {
+    font-size: 1.05rem;
+    line-height: 1.25;
+    margin: 0;
+    color: #121d18;
+  }
+  .hero-chapter .chapter-drawer-body {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    pointer-events: none;
+    transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease, margin 0.3s ease;
+    margin-top: 0;
+  }
+  .hero-chapter.is-expanded {
+    background: rgba(255, 255, 255, 0.96);
+    box-shadow: 0 -8px 40px rgba(0, 0, 0, 0.32);
+  }
+  .hero-chapter.is-expanded .chapter-drawer-body {
+    max-height: 58vh;
+    opacity: 1;
+    pointer-events: auto;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    margin-top: 0.75rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
   }
   @keyframes chapterFadeIn {
     from {
@@ -3714,22 +3824,24 @@ section,
 
   /* Hero bottom card on phone */
   .hero-stage-container {
-    padding: 0 0.8rem 1rem 0.8rem;
+    padding: 0 0.75rem 0.85rem 0.75rem;
   }
   .hero-chapter {
-    padding: 1rem;
-    border-radius: var(--radius-sm);
+    padding: 0.65rem 0.95rem 0.75rem;
+    border-radius: 18px;
   }
   .chapter-title {
-    font-size: 1.22rem;
+    font-size: 0.98rem;
+    line-height: 1.25;
   }
   .chapter-desc {
-    font-size: 0.78rem;
+    font-size: 0.82rem;
+    line-height: 1.45;
     margin-bottom: 0.6rem;
   }
   .chapter-badge {
-    font-size: 0.6rem;
-    padding: 3px 6px;
+    font-size: 0.62rem;
+    padding: 3px 8px;
   }
   .stat-pill {
     padding: 3px 8px;
